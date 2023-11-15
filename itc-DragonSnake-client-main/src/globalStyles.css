@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(90deg, #13163b 0%, #272e5f 50%, #1e2550 100%);
+}
+
+/* NAV BAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    height: 60px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-family: "Artifika", serif;
+    font-weight: 100;
+}
+
+.greeting button {
+    margin-left: 1rem;
+}
+
+.signIn {
+    font-size: 22px;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 100;
+    font-family: "Artifika", serif;
+    color: #efefef;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #efefef;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.signIn:hover {
+    margin-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #efefef;
+}
+
+/* MODAL */
+
+.gameModal {
+    z-index: 100;
+    position: fixed;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameModal-content {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 200px;
+    max-width: 600px;
+    padding: 1.5em;
+}
+
+.gameModal-content button {
+    border-radius: 3rem;
+    transform: scale(1.5);
+    transition: 0.2s;
+}
+.gameModal-content button:hover {
+    border-radius: 3rem;
+    transform: translate(3px, -5px) scale(1.5);
+    filter: drop-shadow(-5px 5px 0px #00000056);
+}
+
+.message {
+    font-size: 2rem;
+    color: red;
+    text-align: center;
+    font-family: "Artifika", serif;
+    margin-bottom: 5rem;
+    text-shadow: 1px 1px 2px red, 0 0 5em rgb(204, 204, 204),
+        0 0 5em rgb(255, 255, 255);
+}
+
+.score {
+    color: white;
+}
+
+.modal {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    overflow: scroll;
+}
+
+.modal-content {
+    padding: 1.5em;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 20px #ccc;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    text-shadow: 1px 1px 2px #ccc;
+    border: 2px solid #ccc;
+}
+
+.modal-header {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1em;
+    padding: 1.5em;
+    background-color: #d73977;
+    color: white;
+    text-align: center;
+    border-radius: 3rem;
+}
+
+.modal-title {
+    margin: 0;
+    text-align: center;
+}
+
+.modal-body {
+    background-color: #f7d958;
+    padding: 1.5em;
+    border-radius: 1rem;
+}
+
+/* MISC */
+button {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 3px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button[disabled] {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.login form,
+.signup form,
+.userForm form,
+.authform form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.authform h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.authform label {
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.authform input {
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.authform button[type="submit"] {
+    color: white;
+    padding: 14px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.authform .error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.switch p {
+    margin-right: 10px;
+    color: black;
+}
+
+.switch button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.playBut1 {
+    background-color: #f7d958;
+    color: #222956;
+    font-size: 15px;
+    font-family: "Artifika", serif;
+    font-weight: 800;
+    border-radius: 11rem;
+    padding: 10px 20px;
+    transition: 0.2s;
+}
+
+.playBut1:hover {
+    background-color: #f7d958;
+    transform: translate(3px, -5px);
+    filter: drop-shadow(-5px 5px 0px #00000056);
+}
+
+.playBut1:active {
+    transform: translate(0, 0);
+    filter: drop-shadow(0 0 0px #00000056);
+}
+/* PROFILE PAGE */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile .scores {
+    max-height: 50vh;
+    overflow: scroll;
+}
+
+.profile div {
+    margin: 1rem;
+}
+/* test */
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
